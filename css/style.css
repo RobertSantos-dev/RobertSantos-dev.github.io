@@ -244,6 +244,11 @@ main{
     height: 150px;
     background-color: white;
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30pt;
 }
 .medidores .medidor{
     display: flex;
@@ -291,8 +296,16 @@ main{
     width: 50%;
     padding: 5px;
 }
-#btn1{border-radius: 25px 0px 0px 25px;}
-#btn2{border-radius: 0px 25px 25px 0px;}
+#btn1{
+    border-radius: 25px 0px 0px 25px;
+    position: relative;
+    z-index: 3;
+}
+#btn2{
+    border-radius: 0px 25px 25px 0px;
+    position: relative;
+    z-index: 3;
+}
 
 .btns svg{
     color: #00dffc;
@@ -313,11 +326,10 @@ main{
     background-color: #000000;
 }
 .contador span.maior{
-    font-size: 80pt;
+    font-size: 70pt;
 }
 .contador span.decimal{
     font-size: 30pt;
-    font-family: 'Asap', sans-serif;
     transform: translateY(25px); 
 }
 .contador button{
@@ -346,4 +358,45 @@ main{
 .rodape p a{
     text-decoration: none;
     font-weight: 600;
+}
+
+/* ======================================================== Configuração para o Relogio digital ====================================================== */
+
+.contadorHoras{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100%;
+}
+
+.contadorHoras span{
+    font-size: 60pt;
+    color: rgb(255, 255, 255);
+}
+.contadorHoras .segundos{
+    font-size: 30pt;
+}
+svg{transition: 0.3s ease;}
+
+#cortina1{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0px 0px 25px;
+    position: absolute;
+    background-color: #bcbdbd;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+#cortina2{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 25px 25px 0px;
+    position: absolute;
+    background-color: #bcbdbd;
 }
