@@ -7,9 +7,14 @@
     margin: 0px;
     box-sizing: border-box;
 }
+button{cursor: pointer;}
 h2{font-family: sans-serif;}
 body{
     background-color: #343838;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
 }
 hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: white;}
 .cabecalho{
@@ -20,16 +25,20 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     position: fixed;
     top: 0px;
     z-index: 3;
-    border-radius: 0px 0px 10% 10%;
 }
 .cabecalho h1 a{
     color: white;
     text-decoration: none;
 }
-
-#section1{
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 70px auto 10px auto;
     width: 90%;
-    margin: 80px auto 60px auto;
+}
+#section1{
+    width: 440px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,21 +102,24 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
 }
 
 #section2{
+    height: 485px;
+}
+
+#section01{
     width: 90%;
-    margin: 0px auto 50px auto;
     background-color: #131313;
-    height: 300px;
+    height: 60%;
     transition: 0.3s ease;
 }
-#section2 ul{
+#section01 ul{
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-#section2 h2{color: #00dffc; margin-bottom: 50px; text-align: center;}
-#section2 ul li{
+#section01 h2{color: #00dffc; margin-bottom: 20px; text-align: center;}
+#section01 ul li{
     width: 170px;
     height: 150px;
     display: flex;
@@ -118,12 +130,12 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     border-radius: 20px 20px 0px 0px;
     transition: 0.3s ease;
 }
-#section2 ul li svg{
+#section01 ul li svg{
     width: 80px;
     height: 80px;
     color: #00dffc;;
 }
-#section2 ul li span, strong{
+#section01 ul li span, strong{
     position: absolute;
     font-weight: 600;
     color: white;
@@ -133,34 +145,33 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     padding: 1px;
     transition: 0.3s ease;
 }
-#section2 ul li:hover{
+#section01 ul li:hover{
     background-color: #00dffc;
 }
-#section2 ul li:hover svg{
+#section01 ul li:hover svg{
     color: black;
 }
-#section2 ul li:hover span{
+#section01 ul li:hover span{
     color: black;
     background-color: white;
 }
-#section2 ul li:hover strong{
+#section01 ul li:hover strong{
     color: black;
     background-color: white;
 }
 
-#section3{
+#section02{
     width: 90%;
-    margin: 0px auto 50px auto;
     background-color: #131313;
-    height: 150px;
+    height:40%;
     transition: 0.3s ease;
 }
-#section3 h2{
+#section02 h2{
     text-align: center;
     color: #00dffc;
     margin-bottom: 60px;
 }
-#section3 ul{
+#section02 ul{
     list-style: none;
     width: 100%;
     display: flex;
@@ -168,10 +179,10 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     align-items: center;
 }
 
-#section2:hover, #section3:hover{
+#section02:hover, #section01:hover{
     transform: scale(1.03);
 }
-#section3 ul li{
+#section02 ul li{
     width: 150px;
     height: 50px;
     display: flex;
@@ -181,7 +192,7 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     justify-content: center;
     transition: 0.3s ease;
 }
-#section3 ul li a{
+#section02 ul li a{
     text-decoration: none;
     color: white;
     font-size: 16pt;
@@ -191,11 +202,150 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     font-weight: 600;
     transition: 0.3s ease;
 }
-#section3 ul li:hover a{
+#section02 ul li:hover a{
     background-color: #00dffc;
     color: black;
 }
 
+
+.interation{
+    margin: 30px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    height: 700px;
+    background-color: #000000d8;
+}
+.interation header{width: 100%;}
+.interation header h2{text-align: center; font-family: sans-serif; color: white;}
+.interation section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.interation .interations{
+    height: 350px;
+    width: 550px;
+    margin-top: 50px;
+}
+.interations .cores{
+    box-shadow: 0px 0px 10px white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    height: 100%;
+}
+.cores{width: 400px;}
+.uniaoCores{
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 30pt;
+}
+.medidores .medidor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px auto;
+}
+.medidores input{
+    width: 220px;
+}
+.medidores label{
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    font-size: 16pt;
+}
+.medidor .corAtual{
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+    font-weight: bold;
+    color: white;
+}
+.relogio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0px 0px 10px white);
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+.btns button{
+    background-color: #000000;
+    border: none;
+    width: 50%;
+    padding: 5px;
+}
+#btn1{
+    border-radius: 25px 0px 0px 25px;
+    position: relative;
+    z-index: 3;
+}
+#btn2{
+    border-radius: 0px 25px 25px 0px;
+    position: relative;
+    z-index: 3;
+}
+
+.btns svg{
+    color: #00dffc;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+}
+.contador{
+    width: 280px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100%;
+    margin-bottom: 5px;
+    color: white;
+    position: relative;
+    background-color: #000000;
+}
+.contador span.maior{
+    font-size: 70pt;
+}
+.contador span.decimal{
+    font-size: 30pt;
+    transform: translateY(25px); 
+}
+.contador button{
+    position: absolute;
+    top: 75%;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #000000;
+    border: none;
+}
+.contador button svg{
+    color:#00dffc;
+    width: 100%;
+    height: 100%;
+}
 .rodape{
     width: 100%;
     display: flex;
@@ -203,9 +353,50 @@ hr{width:40%; height: 2px; margin: 30px auto; border: none; background-color: wh
     align-items: center;
     height: 100px;
     background-color: #008c9e;
-    border-radius: 10% 10% 0px 0px;
+    
 }
 .rodape p a{
     text-decoration: none;
     font-weight: 600;
+}
+
+/* ======================================================== Configuração para o Relogio digital ====================================================== */
+
+.contadorHoras{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 100%;
+}
+
+.contadorHoras span{
+    font-size: 60pt;
+    color: rgb(255, 255, 255);
+}
+.contadorHoras .segundos{
+    font-size: 30pt;
+}
+svg{transition: 0.3s ease;}
+
+#cortina1{
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 0px 0px 25px;
+    position: absolute;
+    background-color: #bcbdbd;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+#cortina2{
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 25px 25px 0px;
+    position: absolute;
+    background-color: #bcbdbd;
 }
